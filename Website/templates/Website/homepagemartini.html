@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* Definizione della classe top-buffer-50 */
+        .spaziosopra {
+          margin-top: 30px;
+        }
+      </style>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>MARTINI Homepage</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-primary">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="logo.JPG" alt="" width="200" height="100">     &nbsp &nbsp &nbsp &nbsp   <font size="7"><b>   A database dedicated to stars! </b></font>
+        </a>
+        </div>
+      </nav>
+      <!-- <div class="container my-5 text-center">
+        <p class="lead">Click on the corresponding image to retreive corresponding data</p>
+      </div>-->
+      
+     
+    <div class="container spaziosopra">
+        <div class="row ">
+          {% for immagine_a_caso in immagini_sito %}
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="./images/s-process (AGB stars).png" class="card-img-top" alt="Go to s-process data" height="220">
+                <div class="card-body">
+                  <h5 class="card-title">s-process</h5>
+                  <p class="card-text">Click on the button to download AGB yields.</p>
+                  <a href="http://fruity.oa-teramo.inaf.it/" class="btn btn-primary">Go to data</a>
+                </div>
+            </div>
+          </div>
+          {% endfor %}
+ 
+        </div>
+    
+      </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+   </body>
+</html>
